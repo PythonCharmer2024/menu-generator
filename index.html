@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Menu Generator</title>
+</head>
+<body>
+    
+    <h1>Food Menu Generator</h1>
+    <button id="darkModeToggle">Toggle Dark Mode</button>
+    <br>
+    <label>
+        <span>
+            <label for="month">Month:</label>
+            <select id="month">Month</select>
+        </span>
+        <br>
+        <span>
+            <label for="year">Year:</label>
+            <select id="year">Year</select>
+        </span>
+    </label>
+    <br>
+    <br>
+    <div class="button-container">
+        <button id="GenerateRows">Generate Rows</button>
+        <button id="Randomize">Randomize</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Breakfast</th>
+                <th>Lunch</th>
+                <th>Snacks</th>
+            </tr>
+        </thead>
+        <tbody id = "days"></tbody>
+    </table>
+    <br>
+    <div class="exporter">
+        <button id = "exporter" onclick="exportToExcel()" class="hidden">Export to Excel</button>
+    </div>
+    
+    <script src = "/index.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>
